@@ -1,0 +1,3 @@
+[submodule "Xray-core-Lite"]
+	path = Xray-core-Lite
+	url = https://github.com/KevinMX/Xray-core-Lite
