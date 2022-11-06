@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build Railgun
+name: Build Railgun for x86_64 devices
 
 on:
   repository_dispatch:
