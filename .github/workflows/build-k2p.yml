@@ -97,7 +97,7 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-        sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
+        sed -i 's/10.0.0.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
     - name: Compile the firmware
       id: compile
