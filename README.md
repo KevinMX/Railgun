@@ -12,7 +12,7 @@ Go to release or Actions CI page. Use at your discretion.
 
 ### Supported Devices
 
-Currently supported
+Currently supported & Tested
 
 |Architecture|Device|
 |-|-|
