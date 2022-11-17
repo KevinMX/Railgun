@@ -12,3 +12,6 @@ rm -rf feeds/packages/net/mosdns
 #Replace vssr cn_ip_cidr source
 rm -f package/small-package/luci-app-vssr/root/etc/vssr/china_ssr.txt
 curl -o package/small-package/luci-app-vssr/root/etc/vssr/china_ssr.txt https://ispip.clang.cn/all_cn_cidr.txt
+
+#Fix NAT Loopback
+sed -i "/exit 0/i\echo 'net.bridge.bridge-nf-call-arptables=0' >> /etc/sysctl.conf\necho 'net.bridge.bridge-nf-call-ip6tables=0' >> /etc/sysctl.conf\necho 'net.bridge.bridge-nf-call-iptables=0' >> /etc/sysctl.conf" package/lean/default-settings/files/zzz-default-settings
