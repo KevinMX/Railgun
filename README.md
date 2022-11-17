@@ -1,6 +1,6 @@
-# Project Railgun
+# Project Railgun ([中文介绍](README_zh.md))
 
-A railgun for your (wireless) router(s).
+A **railgun** for your (wireless) router(s).
 
 ***
 
@@ -19,9 +19,14 @@ Currently supported & Tested
 |x86_64|generic (EFI boot only)|
 |ipq40xx|[P&W R619AC](https://openwrt.org/toh/p_w/r619ac)|
 |ramips/mt7621|[newifi 3 / newifi D2](https://openwrt.org/toh/lenovo/newifi_d2)|
+
+Currently supported but untested
+
+|Architecture|Device|
+|-|-|
 |ramips/mt7621|[Phicomm K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)|
 
-Note: Phicomm K2P build is **NOT** tested since I don't have the device on hand right now.
+(I don't have the device on hand right now.)
 
 ***
 
@@ -32,6 +37,8 @@ Note: Phicomm K2P build is **NOT** tested since I don't have the device on hand 
 |x86_64|`10.0.0.1`|`root`|`password`|
 |ipq40xx|`10.0.0.1`|`root`|`password`|
 |ramips/mt7621|`192.168.2.1`|`root`|`password`|
+
+Since I daily drive this firmware as well, it might contain some dirty & ugly hacks. If you feel uncomfortable about this, do not use this firmware.
 
 ***
 
