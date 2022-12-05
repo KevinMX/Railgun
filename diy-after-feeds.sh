@@ -19,8 +19,5 @@ sed -i "/exit 0/i\echo 'net.bridge.bridge-nf-call-arptables=0' >> /etc/sysctl.co
 #Fix build error
 wget https://github.com/coolsnowwolf/lede/commit/75d227e14fd9bec5f0748403351e3e86ba678440.patch
 wget https://github.com/coolsnowwolf/lede/commit/62461731d77cb739238449777d42711cf8d9478a.patch
-wget https://github.com/coolsnowwolf/packages/commit/770c5159f8be36f626eb2344cb223b614141f8bc.patch
 git apply -R 62461731d77cb739238449777d42711cf8d9478a.patch
 git apply -R 75d227e14fd9bec5f0748403351e3e86ba678440.patch
-cd feeds/packages/net
-git apply -R ../../../770c5159f8be36f626eb2344cb223b614141f8bc.patch
