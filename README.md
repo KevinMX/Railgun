@@ -19,14 +19,7 @@ Currently supported & Tested
 |x86_64|generic (EFI boot only)|
 |ipq40xx|[P&W R619AC](https://openwrt.org/toh/p_w/r619ac)|
 |ramips/mt7621|[newifi 3 / newifi D2](https://openwrt.org/toh/lenovo/newifi_d2)|
-
-Currently supported but untested
-
-|Architecture|Device|
-|-|-|
 |ramips/mt7621|[Phicomm K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)|
-
-(I don't have the device on hand right now.)
 
 ***
 
