@@ -19,14 +19,7 @@
 |x86_64|generic (仅支持 EFI 启动)|
 |ipq40xx|[P&W R619AC / 竞斗云](https://openwrt.org/toh/p_w/r619ac)|
 |ramips/mt7621|[newifi 3 / newifi D2 / 新路由 3](https://openwrt.org/toh/lenovo/newifi_d2)|
-
-目前已支持但未测试
-
-|CPU 架构|设备名称|
-|-|-|
 |ramips/mt7621|[Phicomm K2P / 斐讯 K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)|
-
-（手头目前没有设备故无法测试。）
 
 ***
 
