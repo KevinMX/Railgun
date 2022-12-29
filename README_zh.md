@@ -21,6 +21,14 @@
 |ramips/mt7621|[newifi 3 / newifi D2 / 新路由 3](https://openwrt.org/toh/lenovo/newifi_d2)|
 |ramips/mt7621|[Phicomm K2P / 斐讯 K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)|
 
+目前已支持但未测试
+
+|CPU 架构|设备名称|
+|-|-|
+|ramips/mt7621|[newifi 3 / newifi D2 / 新路由 3](https://openwrt.org/toh/lenovo/newifi_d2)|
+
+（设备不在身边，暂时无法测试。）
+
 ***
 
 ### 其他信息
