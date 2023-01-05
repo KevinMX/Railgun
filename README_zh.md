@@ -1,12 +1,16 @@
-# Project Railgun
+# Project Railgun ([English](README.md))
 
-为您的（无线）路由器精心打造的「超电磁炮」。
+为您的（无线）路由器精心打造的 **「超电磁炮」**。
 
 ***
 
 ### 使用方法
 
 前往 release / 发布页，或者 Actions CI 中自行选择所需固件。
+
+针对先前已在使用本固件的用户的提示（2023 年 1 月 3 日以前的版本）：
+
+请注意 ramips/mt7621 设备（包括新路由 3、斐讯 K2P）目前已切换至 [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt) 源码，**您将需要从 Bootloader**（pbboot/opboot/其他）**重新刷写固件，无法从 LuCI WebUI 保留配置升级。配置无法保留，记得做好备份。**
 
 ***
 
@@ -18,7 +22,6 @@
 |-|-|
 |x86_64|generic (仅支持 EFI 启动)|
 |ipq40xx|[P&W R619AC / 竞斗云](https://openwrt.org/toh/p_w/r619ac)|
-|ramips/mt7621|[newifi 3 / newifi D2 / 新路由 3](https://openwrt.org/toh/lenovo/newifi_d2)|
 |ramips/mt7621|[Phicomm K2P / 斐讯 K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)|
 
 目前已支持但未测试
@@ -27,17 +30,17 @@
 |-|-|
 |ramips/mt7621|[newifi 3 / newifi D2 / 新路由 3](https://openwrt.org/toh/lenovo/newifi_d2)|
 
-（设备不在身边，暂时无法测试。）
+（设备不在身边，暂时无法测试。欢迎提建议/反馈 bug。）
 
 ***
 
 ### 其他信息
 
-|CPU 架构|LuCI/LAN 默认 IP 地址|用户名|密码|
-|-|-|-|-|
-|x86_64|`10.0.0.1`|`root`|`password`|
-|ipq40xx|`10.0.0.1`|`root`|`password`|
-|ramips/mt7621|`192.168.2.1`|`root`|`password`|
+|CPU 架构|LuCI/LAN 默认 IP 地址|用户名|密码|源码仓库|
+|-|-|-|-|-|
+|x86_64|`10.0.0.1`|`root`|`password`|[coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)|
+|ipq40xx|`10.0.0.1`|`root`|`password`|[coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)|
+|ramips/mt7621|`192.168.2.1`|`root`|`password`|[padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)|
 
 由于这个固件实际上也是我日用的固件，为了满足我的需求，可能会包含一些不太能上台面的小 hack & 小魔改，介意慎用。
 
@@ -59,7 +62,7 @@
 
 [small-package](https://github.com/kenzok8/small-package)
 
-[small-package](https://github.com/kenzok8/small-package)
+[openwrt-mos](https://github.com/QiuSimons/openwrt-mos)
 
 [GitHub Actions CI](https://github.com/features/actions)
 

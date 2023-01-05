@@ -8,6 +8,10 @@ A **railgun** for your (wireless) router(s).
 
 Go to release or Actions CI page. Use at your discretion.
 
+A small warning for users already using previous versions Railgun firmware for ramips/mt7621 (Before Jan 3 2023):
+
+Please notice that the firmware of these devices (newifi D2/newifi 3 and Phicomm K2P) has just switched to [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt) source. **You will need a clean flash in your bootloader** (opboot, pbboot, or anything else) **other than upgrading in LuCI WebUI. And you will lose all your configurations. Do backups.**
+
 ***
 
 ### Supported Devices
@@ -26,17 +30,17 @@ Currently supported but untested
 |-|-|
 |ramips/mt7621|[newifi 3 / newifi D2](https://openwrt.org/toh/lenovo/newifi_d2)|
 
-I don't have the device on hand right ATM.
+(I don't have the device on hand right ATM. Advice & bug reports welcome.)
 
 ***
 
 ### Additional Info
 
-|Architecture|LuCI/LAN default IP|Username|Password|
-|-|-|-|-|
-|x86_64|`10.0.0.1`|`root`|`password`|
-|ipq40xx|`10.0.0.1`|`root`|`password`|
-|ramips/mt7621|`192.168.2.1`|`root`|`password`|
+|Architecture|LuCI/LAN default IP|Username|Password|Source Repo|
+|-|-|-|-|-|
+|x86_64|`10.0.0.1`|`root`|`password`|[coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)|
+|ipq40xx|`10.0.0.1`|`root`|`password`|[coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)|
+|ramips/mt7621|`192.168.2.1`|`root`|`password`|[padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)|
 
 Since I daily drive this firmware as well, it might contain some dirty & ugly hacks. If you feel uncomfortable about this, do not use this firmware.
 
