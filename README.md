@@ -54,9 +54,15 @@ If you think the issue is from upstream projects, please open issues there.
 
 [Lean's LEDE source](https://github.com/coolsnowwolf/lede)
 
+[padavanonly's ImmortalWrt source](https://github.com/padavanonly/immortalwrt)
+
 [small-package](https://github.com/kenzok8/small-package)
 
+[openwrt-mos](https://github.com/QiuSimons/openwrt-mos)
+
 [GitHub Actions CI](https://github.com/features/actions)
+
+[237176256 @ right.com.cn](https://www.right.com.cn/forum/space-uid-364126.html) a.k.a [MeIsReallyBa](https://github.com/MeIsReallyBa) (for guiding me enabling 802.11 k/v/r support for MT7615)
 
 And more...
 

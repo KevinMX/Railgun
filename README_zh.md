@@ -55,9 +55,15 @@
 
 [Lean's LEDE source](https://github.com/coolsnowwolf/lede)
 
+[padavanonly's ImmortalWrt source](https://github.com/padavanonly/immortalwrt)
+
+[small-package](https://github.com/kenzok8/small-package)
+
 [small-package](https://github.com/kenzok8/small-package)
 
 [GitHub Actions CI](https://github.com/features/actions)
+
+[237176256 @ right.com.cn](https://www.right.com.cn/forum/space-uid-364126.html) a.k.a [MeIsReallyBa](https://github.com/MeIsReallyBa) (指导开启 MT7615 的 802.11 k/v/r)
 
 以及更多没有提到的贡献者...
 
