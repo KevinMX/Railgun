@@ -24,8 +24,8 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: seeds/r619ac.seed
-  DIY_P1_SH: diy-before-feeds.sh
-  DIY_P2_SH: diy-after-feeds.sh
+  DIY_P1_SH: diy/ipq40xx/diy-before-feeds.sh
+  DIY_P2_SH: diy/ipq40xx/diy-after-feeds.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
