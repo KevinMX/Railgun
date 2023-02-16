@@ -52,6 +52,8 @@ If you think there's something wrong in my builds, feel free to create an [issue
 
 If you think the issue is from upstream projects, please open issues there.
 
+***
+
 ### Credits
 
 [P3TERX](https://p3terx.com)/[Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)

@@ -52,6 +52,8 @@
 
 如果您认为是上游项目存在问题，请在相关项目提 issue。
 
+***
+
 ### 致谢
 
 [P3TERX](https://p3terx.com)/[Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)
