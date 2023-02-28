@@ -12,3 +12,7 @@ curl -o package/small-package/luci-app-vssr/root/etc/vssr/china_ssr.txt https://
 
 # Remove breaking mosdns v5 support, revert back to sbwml/luci-app-mosdns
 rm -rf package/small-package/{mosdns,luci-app-mosdns}
+
+# Replaces msd_lite LuCI package with the Lua version
+rm -rf package/small-package/luci-app-msd_lite
+git clone https://github.com/ximiTech/luci-app-msd_lite package/small-package/luci-app-msd_lite

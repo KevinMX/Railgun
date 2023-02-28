@@ -161,12 +161,14 @@ CONFIG_PACKAGE_libaio=y
 # CONFIG_PACKAGE_libavahi-client is not set
 # CONFIG_PACKAGE_libavahi-dbus-support is not set
 CONFIG_PACKAGE_libbz2=y
+# CONFIG_PACKAGE_libcares is not set
 # CONFIG_PACKAGE_libdaemon is not set
 # CONFIG_PACKAGE_libdbus is not set
 CONFIG_PACKAGE_libdevmapper=y
 CONFIG_PACKAGE_libevent2=y
 # CONFIG_PACKAGE_libexpat is not set
 CONFIG_PACKAGE_libgd=y
+# CONFIG_PACKAGE_libgmp is not set
 # CONFIG_PACKAGE_libgnutls is not set
 CONFIG_PACKAGE_libjpeg-turbo=y
 CONFIG_PACKAGE_libltdl=y
