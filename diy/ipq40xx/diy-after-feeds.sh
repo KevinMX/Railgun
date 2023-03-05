@@ -12,3 +12,6 @@ curl -o package/small-package/luci-app-vssr/root/etc/vssr/china_ssr.txt https://
 
 # Remove breaking mosdns v5 support, revert back to sbwml/luci-app-mosdns
 rm -rf package/small-package/{mosdns,luci-app-mosdns}
+
+# DO NOT use small-package's upx
+rm -rf package/small-package/upx*
