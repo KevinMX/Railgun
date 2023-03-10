@@ -15,3 +15,6 @@ rm -rf package/small-package/{mosdns,luci-app-mosdns}
 
 # DO NOT use small-package's upx
 rm -rf package/small-package/upx*
+
+# Use passwall icon in luci-theme-design by default
+sed -i 's/openclash/passwall/g' package/small-package/luci-app-design-config/root/etc/config
