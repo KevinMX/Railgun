@@ -18,3 +18,7 @@ sed -i "/exit 0/i\echo 'net.bridge.bridge-nf-call-arptables=0' >> /etc/sysctl.co
 rm -rf $(find . -name mosdns) $(find . -name v2ray-geodata)
 git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/mosdns
 git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+
+# Update Go to 1.20 for Xray-core build
+rm -rf feeds/packages/lang/golang
+svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang feeds/packages/lang/golang
