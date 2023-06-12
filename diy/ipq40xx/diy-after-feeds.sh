@@ -18,3 +18,6 @@ rm -rf package/small-package/upx*
 
 # Use passwall icon in luci-theme-design by default
 sed -i 's/openclash/passwall/g' package/small-package/luci-app-design-config/root/etc/config/design
+
+# Tries to fix build error: we should probably not override some core packages
+rm -rf package/small-package/{opkg,firewall}
