@@ -71,7 +71,7 @@ jobs:
       run: cd immortalwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd immortalwrt && ./scripts/feeds install -a
+      run: cd immortalwrt && ./scripts/feeds install -a -f
 
     - name: Load custom configuration
       run: |
