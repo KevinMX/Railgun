@@ -24,8 +24,8 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: seeds/ufi003.seed
-  DIY_P1_SH: diy/msm89xx/diy-before-feeds.sh
-  DIY_P2_SH: diy/msm89xx/diy-after-feeds.sh
+  DIY_P1_SH: diy/msm89xx/ufi003/diy-before-feeds.sh
+  DIY_P2_SH: diy/msm89xx/ufi003/diy-after-feeds.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
