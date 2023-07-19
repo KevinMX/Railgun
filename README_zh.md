@@ -20,29 +20,37 @@
 
 目前已支持 & 已测试
 
-|CPU 架构|设备名称|
-|-|-|
-|x86_64|generic (仅支持 EFI 启动)|
+| CPU / 架构 | 设备名称                  |
+|------------|---------------------------|
+| x86_64     | generic (仅支持 EFI 启动) |
+| msm89xx    | ufi003                    |
 
 目前已支持但未测试
 
-|CPU 架构|设备名称|
-|-|-|
-|ramips/mt7621|[newifi 3 / newifi D2 / 新路由 3](https://openwrt.org/toh/lenovo/newifi_d2)|
-|ramips/mt7621|[Phicomm K2P / 斐讯 K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)|
-|ipq40xx|[P&W R619AC / 竞斗云](https://openwrt.org/toh/p_w/r619ac)|
+| CPU / 架构    | 设备名称                                                                    |
+|---------------|---------------------------------------------------------------------------|
+| ramips/mt7621 | [newifi 3 / newifi D2 / 新路由 3](https://openwrt.org/toh/lenovo/newifi_d2) |
+| ramips/mt7621 | [Phicomm K2P / 斐讯 K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)          |
+| ipq40xx       | [P&W R619AC / 竞斗云](https://openwrt.org/toh/p_w/r619ac)                   |
 
 （手头没有设备，暂时无法测试。欢迎提建议/反馈 bug。）
+
+目前尚未支持但已计划支持
+
+| CPU / 架构 | 设备名称           | 源码仓库                                                                    |
+|------------|------------------|-----------------------------------------------------------------------------|
+| mt798x     | 捷稀 / JCG Q30 Pro | [padavanonly/immortalwrtARM](https://github.com/padavanonly/immortalwrtARM) |
 
 ***
 
 ### 其他信息
 
-|CPU 架构|LuCI/LAN 默认 IP 地址|用户名|密码|源码仓库|
-|-|-|-|-|-|
-|x86_64|`10.0.0.1`|`root`|`password`|[coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)|
-|ipq40xx|`10.0.0.1`|`root`|`password`|[coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)|
-|ramips/mt7621|`192.168.2.1`|`root`|`password`|[padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)|
+| CPU / 架构    | LuCI/LAN 默认 IP 地址 | 用户名 | 密码       | 源码仓库                                                              |
+|---------------|-----------------------|--------|------------|-----------------------------------------------------------------------|
+| x86_64        | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)             |
+| ipq40xx       | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)             |
+| msm89xx       | `10.0.0.1`            | `root` | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod) |
+| ramips/mt7621 | `192.168.2.1`         | `root` | `password` | [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt) |
 
 由于这个固件实际上也是我日用的固件，为了满足我的需求，可能会包含一些不太能上台面的小 hack & 小魔改，介意慎用。
 
@@ -63,6 +71,8 @@
 [Lean's LEDE source](https://github.com/coolsnowwolf/lede)
 
 [padavanonly's ImmortalWrt source](https://github.com/padavanonly/immortalwrt)
+
+[HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)
 
 [small-package](https://github.com/kenzok8/small-package)
 

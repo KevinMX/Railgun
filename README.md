@@ -22,29 +22,37 @@ Since there's just not enough space to fit latest version of Xray-core into that
 
 Currently supported & Tested
 
-|Architecture|Device|
-|-|-|
-|x86_64|generic (EFI boot only)|
+| CPU / Architecture | Device                  |
+|--------------------|-------------------------|
+| x86_64             | generic (EFI boot only) |
+| msm89xx            | ufi003                  |
 
 Currently supported but untested
 
-|Architecture|Device|
-|-|-|
-|ramips/mt7621|[newifi 3 / newifi D2](https://openwrt.org/toh/lenovo/newifi_d2)|
-|ramips/mt7621|[Phicomm K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)|
-|ipq40xx|[P&W R619AC](https://openwrt.org/toh/p_w/r619ac)|
+| CPU / Architecture | Device                                                           |
+|--------------------|------------------------------------------------------------------|
+| ramips/mt7621      | [newifi 3 / newifi D2](https://openwrt.org/toh/lenovo/newifi_d2) |
+| ramips/mt7621      | [Phicomm K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)          |
+| ipq40xx            | [P&W R619AC](https://openwrt.org/toh/p_w/r619ac)                 |
 
 (I don't have the device on hand right ATM. Advice & bug reports welcome.)
+
+Currently unsupported, already planned / WIP
+
+| CPU / Architecture | Device      | Source repo                                                                 |
+|--------------------|-------------|-----------------------------------------------------------------------------|
+| mt798x             | JCG Q30 Pro | [padavanonly/immortalwrtARM](https://github.com/padavanonly/immortalwrtARM) |
 
 ***
 
 ### Additional Info
 
-|Architecture|LuCI/LAN default IP|Username|Password|Source Repo|
-|-|-|-|-|-|
-|x86_64|`10.0.0.1`|`root`|`password`|[coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)|
-|ipq40xx|`10.0.0.1`|`root`|`password`|[coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)|
-|ramips/mt7621|`192.168.2.1`|`root`|`password`|[padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)|
+| CPU / Architecture | LuCI/LAN default IP | Username | Password   | Source Repo                                                           |
+|--------------------|---------------------|----------|------------|-----------------------------------------------------------------------|
+| x86_64             | `10.0.0.1`          | `root`   | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)             |
+| ipq40xx            | `10.0.0.1`          | `root`   | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)             |
+| msm89xx            | `10.0.0.1`          | `root`   | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod) |
+| ramips/mt7621      | `192.168.2.1`       | `root`   | `password` | [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt) |
 
 Since I daily drive this firmware as well, it might contain some dirty & ugly hacks. If you feel uncomfortable about this, do not use this firmware.
 
@@ -65,6 +73,8 @@ If you think the issue is from upstream projects, please open issues there.
 [Lean's LEDE source](https://github.com/coolsnowwolf/lede)
 
 [padavanonly's ImmortalWrt source](https://github.com/padavanonly/immortalwrt)
+
+[HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)
 
 [small-package](https://github.com/kenzok8/small-package)
 
