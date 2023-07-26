@@ -158,7 +158,7 @@ jobs:
       uses: Blueplanet20120/delete-workflow-runs@main
       with:
         retain_days: 7
-        keep_minimum_runs: 4
+        keep_minimum_runs: 12
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@master
