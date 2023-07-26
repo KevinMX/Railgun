@@ -22,3 +22,6 @@ sed -i 's/openclash/passwall/g' package/small-package/luci-app-design-config/roo
 # Tries to fix build error: we should probably not override some core packages
 # Maybe we should even deprecate small-package if these kind of things happen again
 rm -rf package/small-package/{opkg,firewall}
+
+# Make tailsale config persistent during sysupgrades
+echo "/etc/tailscale/" >> package/base-files/files/etc/sysupgrade.conf
