@@ -24,6 +24,7 @@
 |------------|---------------------------|
 | x86_64     | generic (仅支持 EFI 启动) |
 | msm89xx    | ufi003                    |
+| mt7981     | 捷稀 / JCG Q30 Pro        |
 
 目前已支持但未测试
 
@@ -35,22 +36,18 @@
 
 （手头没有设备，暂时无法测试。欢迎提建议/反馈 bug。）
 
-目前尚未支持但已计划支持
-
-| CPU / 架构 | 设备名称           | 源码仓库                                                                    |
-|------------|------------------|-----------------------------------------------------------------------------|
-| mt798x     | 捷稀 / JCG Q30 Pro | [padavanonly/immortalwrtARM](https://github.com/padavanonly/immortalwrtARM) |
-
 ***
 
 ### 其他信息
 
-| CPU / 架构    | LuCI/LAN 默认 IP 地址 | 用户名 | 密码       | 源码仓库                                                              |
-|---------------|-----------------------|--------|------------|-----------------------------------------------------------------------|
-| x86_64        | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)             |
-| ipq40xx       | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)             |
-| msm89xx       | `10.0.0.1`            | `root` | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod) |
-| ramips/mt7621 | `192.168.2.1`         | `root` | `password` | [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt) |
+| CPU / 架构    | LuCI/LAN 默认 IP 地址 | 用户名 | 密码       | 源码仓库                                                                    |
+|---------------|-----------------------|--------|------------|-----------------------------------------------------------------------------|
+| x86_64        | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
+| ipq40xx       | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
+| msm89xx       | `10.0.0.1`            | `root` | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)       |
+| mt7981        | `10.0.0.1`            | `root` | `password` | [padavanonly/immortalwrtARM](https://github.com/padavanonly/immortalwrtARM) |
+| ramips/mt7621 | `192.168.2.1`         | `root` | `password` | [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)       |
+
 
 由于这个固件实际上也是我日用的固件，为了满足我的需求，可能会包含一些不太能上台面的小 hack & 小魔改，介意慎用。
 
@@ -71,6 +68,8 @@
 [Lean's LEDE source](https://github.com/coolsnowwolf/lede)
 
 [padavanonly's ImmortalWrt source](https://github.com/padavanonly/immortalwrt)
+
+[padavanonly's ImmortalWrtARM source](https://github.com/padavanonly/immortalwrtARM)
 
 [HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)
 
