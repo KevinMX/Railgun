@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Clean up dependencies
-find . -name Makefile -exec dirname {} \; | grep -wE 'brook|gn|chinadns-ng|dns2socks|dns2tcp|hysteria|ipt2socks|microsocks|naiveproxy|pdnsd-alt|redsocks2|sagernet-core|shadowsocks-rust|shadowsocksr-libev|simple-obfs|sing-box|ssocks|tcping|trojan|trojan-go|trojan-plus|v2ray-core|v2ray-geodata|v2ray-plugin|v2raya|xray-core|xray-plugin' | xargs rm -rf
-
 # Add packages from kenzok8/small-package
 git clone --depth=1 https://github.com/kenzok8/small-package package/small-package
 
