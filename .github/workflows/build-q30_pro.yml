@@ -139,7 +139,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y.%m.%d-%H%M")-Q30_Pro" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d-%H%M")-JCG_Q30_Pro" >> $GITHUB_OUTPUT
         touch release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "[WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
