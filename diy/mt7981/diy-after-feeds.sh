@@ -16,10 +16,10 @@ function git_sparse_clone() {
 find feeds -name Makefile -exec dirname {} \; | grep -wE 'brook|gn|chinadns-ng|dns2socks|dns2tcp|hysteria|ipt2socks|microsocks|naiveproxy|pdnsd-alt|redsocks2|sagernet-core|shadowsocks-rust|shadowsocksr-libev|simple-obfs|sing-box|ssocks|tcping|trojan|trojan-go|trojan-plus|v2ray-core|v2ray-geodata|v2ray-plugin|v2raya|xray-core|xray-plugin|lua-neturl|luci-app-ssr-plus|mosdns' | xargs rm -rf
 
 # Modify default IP
-sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.6.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
 # Modify default Hostname
-sed -i 's/OpenWrt/Railgun/g' package/base-files/files/bin/config_generate
+sed -i 's/ImmortalWrt/Railgun/g' package/base-files/files/bin/config_generate
 
 # Replace vssr cn_ip_cidr source
 rm -f package/small-package/luci-app-vssr/root/etc/vssr/china_ssr.txt

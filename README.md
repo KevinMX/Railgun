@@ -35,6 +35,7 @@ Currently supported but untested
 | ramips/mt7621      | [newifi 3 / newifi D2](https://openwrt.org/toh/lenovo/newifi_d2) |
 | ramips/mt7621      | [Phicomm K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)          |
 | ipq40xx            | [P&W R619AC](https://openwrt.org/toh/p_w/r619ac)                 |
+| mt7981             | All other devices except JCG Q30 Pro                             |
 
 (I don't have the device on hand right ATM. Advice & bug reports welcome.)
 

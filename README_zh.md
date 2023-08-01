@@ -33,6 +33,7 @@
 | ramips/mt7621 | [newifi 3 / newifi D2 / 新路由 3](https://openwrt.org/toh/lenovo/newifi_d2) |
 | ramips/mt7621 | [Phicomm K2P / 斐讯 K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)          |
 | ipq40xx       | [P&W R619AC / 竞斗云](https://openwrt.org/toh/p_w/r619ac)                   |
+| mt7981        | 除 JCG Q30 Pro 之外的设备                                                   |
 
 （手头没有设备，暂时无法测试。欢迎提建议/反馈 bug。）
 
