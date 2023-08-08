@@ -10,11 +10,13 @@
 
 针对先前已在使用本固件的用户的提示（2023 年 1 月 3 日以前的版本）：
 
-请注意 ramips/mt7621 设备（包括新路由 3、斐讯 K2P）目前已切换至 [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt) 源码，**您将需要从 Bootloader**（pbboot/opboot/其他）**重新刷写固件，无法从 LuCI WebUI 保留配置升级。配置无法保留，记得做好备份。**
+> **Warning** 
+> ramips/mt7621 设备（包括新路由 3、斐讯 K2P）目前已切换至 [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt) 源码，**您将需要从 Bootloader**（pbboot/opboot/其他）**重新刷写固件，无法从 LuCI WebUI 保留配置升级。配置无法保留，记得做好备份。**
+
+> **Warning** 
+> 针对 斐讯 K2P / Phicomm K2P，由于 16M SPI Flash 空间不足，已经无法塞下最新版的 Xray-core，在尽可能不损失功能的情况下，切换到了 OpenClash，理论上可使用 Clash.Meta Core 实现先前的绝大部分功能。由于手上没有设备，暂时无法测试。如您遇到任何问题，或者有其他建议，欢迎在 Issues/Discussions 区讨论。
 
 ***
-
-**Warning**: 针对 斐讯 K2P / Phicomm K2P，由于 16M SPI Flash 空间不足，已经无法塞下最新版的 Xray-core，在尽可能不损失功能的情况下，切换到了 OpenClash，理论上可使用 Clash.Meta Core 实现先前的绝大部分功能。由于手上没有设备，暂时无法测试。如您遇到任何问题，或者有其他建议，欢迎在 Issues/Discussions 区讨论。
 
 ### 当前支持设备
 

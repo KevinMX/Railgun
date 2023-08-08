@@ -8,13 +8,13 @@ A **railgun** for your (wireless) router(s).
 
 Go to release or Actions CI page. Use at your discretion.
 
-A small warning for users already using previous versions Railgun firmware for ramips/mt7621 (Before Jan 3 2023):
 
-Please notice that the firmware of these devices (newifi D2/newifi 3 and Phicomm K2P) has just switched to [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt) source. **You will need a clean flash in your bootloader** (opboot, pbboot, or anything else) **other than upgrading in LuCI WebUI. And you will lose all your configurations. Do backups.**
+> **Warning**
+> For users already using previous versions Railgun firmware for ramips/mt7621 (Before Jan 3 2023):
+> Please notice that the firmware of these devices (newifi D2/newifi 3 and Phicomm K2P) has just switched to [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt) source. **You will need a clean flash in your bootloader** (opboot, pbboot, or anything else) **other than upgrading in LuCI WebUI. And you will lose all your configurations. Do backups.**
 
-Warning for Phicomm K2P:
-
-Since there's just not enough space to fit latest version of Xray-core into that tiny 16M SPI Flash, I have to remove luci-app-ssr-plus (a.k.a. helloworld) and replaced it with OpenClash, which in theory, combines with Clash.Meta core, should provide most functionalities. I didn't test it since I don't have the device on hand, if you ran into any issues, or you have a better implementation, feel free to open up an [issue](https://github.com/KevinMX/Railgun/issues), or discuss in [discussions](https://github.com/KevinMX/Railgun/discussions).
+> **Warning** 
+> Phicomm K2P users: Since there's just not enough space to fit latest version of Xray-core into that tiny 16M SPI Flash, I have to remove luci-app-ssr-plus (a.k.a. helloworld) and replaced it with OpenClash, which in theory, combines with Clash.Meta core, should provide most functionalities. I didn't test it since I don't have the device on hand, if you ran into any issues, or you have a better implementation, feel free to open up an [issue](https://github.com/KevinMX/Railgun/issues), or discuss in [discussions](https://github.com/KevinMX/Railgun/discussions).
 
 ***
 
