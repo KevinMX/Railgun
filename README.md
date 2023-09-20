@@ -39,6 +39,15 @@ Currently supported but untested
 
 (I don't have the device on hand right ATM. Advice & bug reports welcome.)
 
+Might be EOL soon (users are recommended to use ImmortalWrt SNAPSHOT instead)
+
+| CPU / Architecture    | Device                                                                    |
+|---------------|---------------------------------------------------------------------------|
+| x86_64     | generic|
+|mt7981|multiple devices|
+|ipq40xx|[P&W R619AC](https://openwrt.org/toh/p_w/r619ac)|
+
+> There's just no point to recompile again and again, wasting Actions CI's compute power. If ImmortalWrt mainline works well.
 ***
 
 ### Additional Info
