@@ -142,12 +142,12 @@ jobs:
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "status=success" >> $GITHUB_OUTPUT
 
-    - name: Upload firmware directory
-      uses: actions/upload-artifact@main
-      if: steps.organize.outputs.status == 'success' && !cancelled()
-      with:
-        name: immortalwrt-mt798x_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: ${{ env.FIRMWARE }}
+    # - name: Upload firmware directory
+    #   uses: actions/upload-artifact@main
+    #   if: steps.organize.outputs.status == 'success' && !cancelled()
+    #   with:
+    #     name: immortalwrt-mt798x_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+    #     path: ${{ env.FIRMWARE }}
 
     - name: Generate release tag
       id: tag
@@ -155,7 +155,6 @@ jobs:
       run: |
         echo "release_tag=$(date +"%Y.%m.%d-%H%M")-MT7981_APBase" >> $GITHUB_OUTPUT
         touch release.txt
-        [ $UPLOAD_WETRANSFER = true ] && echo "[WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
