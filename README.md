@@ -55,9 +55,13 @@ Since I daily drive this firmware as well, it might contain some dirty & ugly ha
 
 ### If anything goes wrong...
 
-If you think there's something wrong in my builds, feel free to create an [issue](https://github.com/KevinMX/Railgun/issues/new/choose). No annoying templates needed. Just remember to leave enough information (how to reproduce, necessary logs, etc) here. Nobody like guess your problem and come up with a solution out of no where :)
+If you think there's something wrong in my builds, feel free to create an [issue](https://github.com/KevinMX/Railgun/issues/new/choose). 
 
-If you think the issue is from upstream projects, please open issues there.
+I don't like those annoying issue templates, those are disclaimers rather than rules. Just remember to leave enough information (full reproduce steps, necessary logs, etc) here. Give us as much info as you can. If you don't know what to provide, JUST ASK.
+
+Nobody like guess your problem and come up with a solution out of no where :)
+
+If you think the issue is from upstream projects, please open issues there instead.
 
 ***
 
