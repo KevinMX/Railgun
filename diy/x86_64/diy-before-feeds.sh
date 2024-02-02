@@ -1,4 +1,8 @@
 #!/bin/bash
-# Add packages from kenzok8/small-package
-git clone --depth=1 https://github.com/kenzok8/small-package package/small-package
 
+# Enable helloworld
+sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+
+# Add passwall
+echo 'src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main' >> feeds.conf.default
+echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main' >> feeds.conf.default    
