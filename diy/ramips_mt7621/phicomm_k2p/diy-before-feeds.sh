@@ -9,5 +9,9 @@ function git_sparse_clone() {
     cd ../ && rm -rf $2
 }
 
-# Add mtkiappd support for 802.11 k/v/r
-git_sparse_clone https://github.com/coolsnowwolf/lede lede package/lean/mt/mtkiappd package/kernel/mt-drivers/mtkiappd
+# Enable helloworld
+sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+
+# Add passwall
+echo 'src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main' >> feeds.conf.default
+echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main' >> feeds.conf.default    
