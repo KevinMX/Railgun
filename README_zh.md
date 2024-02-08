@@ -8,9 +8,6 @@
 
 前往 release / 发布页，或者 Actions CI 中自行选择所需固件。
 
-> [!WARNING]
-> 致斐讯 K2P / Phicomm K2P 用户：由于 16M SPI Flash 空间不足，已经无法塞下最新版的 Xray-core，在尽可能不损失功能的情况下，切换到了 OpenClash，理论上可使用 Clash.Meta Core 实现先前的绝大部分功能。由于手上没有设备，暂时无法测试。如您遇到任何问题，或者有其他建议，欢迎在 [issue](https://github.com/KevinMX/Railgun/issues)/[discussions](https://github.com/KevinMX/Railgun/discussions) 区讨论。
-
 ***
 
 ### 当前支持设备
@@ -39,14 +36,14 @@
 
 ### 其他信息
 
-| 目标平台    | LuCI/LAN 默认 IP 地址 | 用户名 | 密码       | 源码仓库                                                                    |
+| 目标平台       |  LuCI/LAN 默认 IP 地址 | 用户名 | 密码       | 源码仓库                                                                    |
 |---------------|-----------------------|--------|------------|-----------------------------------------------------------------------------|
 | x86_64        | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
 | ipq40xx       | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
 | msm89xx       | `10.0.0.1`            | `root` | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)       |
 | mt7981        | `10.0.0.1`            | `root` | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
 | mt7981/apbase | `10.0.0.1`            | `root` | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
-| ramips/mt7621 | `192.168.2.1`         | `root` | `password` | [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)       |
+| ramips/mt7621 | `192.168.2.1`         | `root` | `password` | [padavanonly/immortalwrt](https://github.com/coolsnowwolf/lede)             |
 
 
 由于这个固件实际上也是我日用的固件，为了满足我的需求，可能会包含一些不太能上台面的小 hack & 小魔改，介意慎用。
