@@ -8,10 +8,6 @@ A **railgun** for your (wireless) router(s).
 
 Go to release or Actions CI page. Use at your discretion.
 
-
-> [!WARNING]
-> To Phicomm K2P users: Since there's just not enough space to fit latest version of Xray-core into that tiny 16M SPI Flash, I have to remove luci-app-ssr-plus (a.k.a. helloworld) and replaced it with OpenClash, which in theory, combines with Clash.Meta core, should provide most functionalities. I didn't test it since I don't have the device on hand, if you ran into any issues, or you have a better implementation, feel free to open up an [issue](https://github.com/KevinMX/Railgun/issues), or discuss in [discussions](https://github.com/KevinMX/Railgun/discussions).
-
 ***
 
 ### Supported Devices
@@ -47,7 +43,7 @@ Currently supported but untested
 | msm89xx       | `10.0.0.1`          | `root`   | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)       |
 | mt7981        | `10.0.0.1`          | `root`   | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
 | mt7981/apbase | `10.0.0.1`          | `root`   | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
-| ramips/mt7621 | `192.168.2.1`       | `root`   | `password` | [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)       |
+| ramips/mt7621 | `192.168.2.1`       | `root`   | `password` | [padavanonly/immortalwrt](https://github.com/coolsnowwolf.lede)             |
 
 Since I daily drive this firmware as well, it might contain some dirty & ugly hacks. If you feel uncomfortable about this, do not use this firmware.
 
