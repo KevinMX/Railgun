@@ -42,7 +42,7 @@ jobs:
     - name: Free Disk Space
       uses: jlumbroso/free-disk-space@main
       with:
-        tool-cache: false
+        tool-cache: true
         android: true
         dotnet: true
         haskell: true
@@ -142,12 +142,12 @@ jobs:
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "status=success" >> $GITHUB_OUTPUT
 
-    # - name: Upload firmware directory
-    #   uses: actions/upload-artifact@main
-    #   if: steps.organize.outputs.status == 'success' && !cancelled()
-    #   with:
-    #     name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-    #     path: ${{ env.FIRMWARE }}
+    - name: Upload firmware directory
+      uses: actions/upload-artifact@main
+      if: steps.organize.outputs.status == 'success' && !cancelled()
+      with:
+        name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        path: ${{ env.FIRMWARE }}
 
     - name: Generate release tag
       id: tag
