@@ -14,7 +14,7 @@
 
 目前已支持 & 已测试
 
-| 目标平台      | 设备名称                  |
+| 目标平台      | 设备型号                  |
 |---------------|---------------------------|
 | x86_64        | generic (仅支持 EFI 启动) |
 | msm89xx       | ufi003                    |
@@ -22,7 +22,7 @@
 
 目前已支持但未测试
 
-| 目标平台    | 设备名称                                                                    |
+| 目标平台      | 设备型号                                                                    |
 |---------------|---------------------------------------------------------------------------|
 | ramips/mt7621 | [newifi 3 / newifi D2 / 新路由 3](https://openwrt.org/toh/lenovo/newifi_d2) |
 | ramips/mt7621 | [Phicomm K2P / 斐讯 K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)          |
@@ -32,18 +32,26 @@
 
 （手头没有设备，暂时无法测试。欢迎提建议/反馈 bug。）
 
+需要修复，目前不可用~~（咕咕咕~~
+
+| 目标平台 | 设备型号    |
+|----------|-------------|
+| mt7981   | All devices |
+| msm89xx  | ufi003      |
+
 ***
 
 ### 其他信息
 
-| 目标平台       |  LuCI/LAN 默认 IP 地址 | 用户名 | 密码       | 源码仓库                                                                    |
-|---------------|-----------------------|--------|------------|-----------------------------------------------------------------------------|
-| x86_64        | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
-| ipq40xx       | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
-| msm89xx       | `10.0.0.1`            | `root` | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)       |
-| mt7981        | `10.0.0.1`            | `root` | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
-| mt7981/apbase | `10.0.0.1`            | `root` | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
-| ramips/mt7621 | `192.168.2.1`         | `root` | `password` | [padavanonly/immortalwrt](https://github.com/coolsnowwolf/lede)             |
+| 目标平台                  | LuCI/LAN 默认 IP 地址 | 用户名 | 密码       | 源码仓库                                                                    |
+|---------------------------|-----------------------|--------|------------|-----------------------------------------------------------------------------|
+| x86_64                    | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
+| ipq40xx                   | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
+| msm89xx                   | `10.0.0.1`            | `root` | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)       |
+| mt7981                    | `10.0.0.1`            | `root` | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
+| mt7981/apbase             | `10.0.0.1`            | `root` | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
+| ramips/mt7621 (newifi_d2) | `192.168.2.1`         | `root` | `password` | [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)       |
+| ramips/mt7621 (k2p)       | `192.168.2.1`         | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
 
 
 由于这个固件实际上也是我日用的固件，为了满足我的需求，可能会包含一些不太能上台面的小 hack & 小魔改，介意慎用。
