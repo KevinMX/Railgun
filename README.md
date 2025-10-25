@@ -15,25 +15,25 @@ Go to release or Actions CI page. Use at your discretion.
 Currently supported & Tested
 
 | Target        | Device                  |
-|---------------|-------------------------|
-| x86_64        | generic (EFI boot only) |
+| ------------- | ----------------------- |
 | mt7981/apbase | JCG Q30 Pro             |
 
-Currently supported but untested
+WIP
+
+| Target        | Device                         |
+| ------------- | ------------------------------ |
+| mt7981        | All devices                    |
+| mt7981/apbase | All devices except JCG Q30 Pro |
+
+Dropped, please consider using [ImmortalWrt](https://firmware-selector.immortalwrt.org/) instead (except UFI003)
 
 | Target        | Device                                                           |
-|---------------|------------------------------------------------------------------|
+| ------------- | ---------------------------------------------------------------- |
 | ramips/mt7621 | [newifi 3 / newifi D2](https://openwrt.org/toh/lenovo/newifi_d2) |
 | ramips/mt7621 | [Phicomm K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)          |
 | ipq40xx       | [P&W R619AC](https://openwrt.org/toh/p_w/r619ac)                 |
-| mt7981/apbase | All devices except JCG Q30 Pro                                   |
-
-WIP, currently broken
-
-| Target  | Device      |
-|---------|-------------|
-| mt7981  | All devices |
-| msm89xx | ufi003      |
+| x86_64        | generic (EFI boot only)                                                     |
+| msm89xx       | ufi003                                                           |
 
 (I don't have the device on hand right ATM. Advice & bug reports welcome.)
 
@@ -41,15 +41,10 @@ WIP, currently broken
 
 ### Additional Info
 
-| Target                    | LuCI/LAN default IP | Username | Password   | Source Repo                                                                 |
-|---------------------------|---------------------|----------|------------|-----------------------------------------------------------------------------|
-| x86_64                    | `10.0.0.1`          | `root`   | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
-| ipq40xx                   | `10.0.0.1`          | `root`   | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
-| msm89xx                   | `10.0.0.1`          | `root`   | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)       |
-| mt7981                    | `10.0.0.1`          | `root`   | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
-| mt7981/apbase             | `10.0.0.1`          | `root`   | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
-| ramips/mt7621 (newifi_d2) | `192.168.2.1`       | `root`   | `password` | [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)       |
-| ramips/mt7621 (k2p)       | `192.168.2.1`       | `root`   | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
+| Target                    | LuCI/LAN default IP | Username | Password   | Source Repo                                                                                 |
+| ------------------------- | ------------------- | -------- | ---------- | ------------------------------------------------------------------------------------------- |
+| mt7981                    | `10.0.0.1`          | `root`   | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x)                 |
+| mt7981/apbase             | `10.0.0.1`          | `root`   | `password` | [padavanonly/immortalwrt-mt798x-6.6](https://github.com/padavanonly/immortalwrt-mt798x-6.6) |
 
 Since I daily drive this firmware as well, it might contain some dirty & ugly hacks. If you feel uncomfortable about this, do not use this firmware.
 
@@ -75,6 +70,7 @@ Upstream projects
 
 - [Lean's LEDE source](https://github.com/coolsnowwolf/lede)
 - [padavanonly's ImmortalWrt source](https://github.com/padavanonly/immortalwrt)
+- [padavanonly's ImmortalWrt source for MT798x](https://github.com/padavanonly/immortalwrt-mt798x-6.6)
 - [HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)
 - [hanwckf's immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x)
 
@@ -84,7 +80,7 @@ Infra & CI
 
 Special thanks
 
-- [237176256 @ right.com.cn](https://www.right.com.cn/forum/space-uid-364126.html) a.k.a [MeIsReallyBa](https://github.com/MeIsReallyBa) (for guiding me enabling 802.11 k/v/r support for MT7615)
+- [237176256 @ right.com.cn](https://www.right.com.cn/forum/space-uid-364126.html) a.k.a [padavanonly](https://github.com/padavanonly) (for guiding me enabling 802.11 k/v/r support for MT7615)
 
 And more...
 

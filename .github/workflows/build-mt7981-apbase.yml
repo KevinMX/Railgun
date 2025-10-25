@@ -20,8 +20,8 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
-  REPO_BRANCH: openwrt-21.02
+  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
+  REPO_BRANCH: openwrt-24.10-6.6
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: seeds/mt7981_apbase.seed
   DIY_P1_SH: diy/mt7981_apbase/diy-before-feeds.sh
@@ -71,28 +71,28 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL -b $REPO_BRANCH immortalwrt-mt798x
-        ln -sf /workdir/immortalwrt-mt798x $GITHUB_WORKSPACE/immortalwrt-mt798x
+        git clone $REPO_URL -b $REPO_BRANCH immortalwrt-mt798x-6.6
+        ln -sf /workdir/immortalwrt-mt798x-6.6 $GITHUB_WORKSPACE/immortalwrt-mt798x-6.6
 
     - name: Load custom feeds
       run: |
-        [ -e $FEEDS_CONF ] && mv $FEEDS_CONF immortalwrt-mt798x/feeds.conf.default
+        [ -e $FEEDS_CONF ] && mv $FEEDS_CONF immortalwrt-mt798x-6.6/feeds.conf.default
         chmod +x $DIY_P1_SH
-        cd immortalwrt-mt798x
+        cd immortalwrt-mt798x-6.6
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
-      run: cd immortalwrt-mt798x && ./scripts/feeds update -a
+      run: cd immortalwrt-mt798x-6.6 && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd immortalwrt-mt798x && ./scripts/feeds install -a -f
+      run: cd immortalwrt-mt798x-6.6 && ./scripts/feeds install -a -f
 
     - name: Load custom configuration
       run: |
-        [ -e files ] && mv files immortalwrt-mt798x/files
-        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE immortalwrt-mt798x/.config
+        [ -e files ] && mv files immortalwrt-mt798x-6.6/files
+        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE immortalwrt-mt798x-6.6/.config
         chmod +x $DIY_P2_SH
-        cd immortalwrt-mt798x
+        cd immortalwrt-mt798x-6.6
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
@@ -105,7 +105,7 @@ jobs:
     - name: Download package
       id: package
       run: |
-        cd immortalwrt-mt798x
+        cd immortalwrt-mt798x-6.6
         make defconfig
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
@@ -114,7 +114,7 @@ jobs:
     - name: Compile the firmware
       id: compile
       run: |
-        cd immortalwrt-mt798x
+        cd immortalwrt-mt798x-6.6
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
         echo "status=success" >> $GITHUB_OUTPUT
@@ -130,14 +130,14 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        name: immortalwrt-mt798x_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: immortalwrt-mt798x/bin
+        name: immortalwrt-mt798x-6.6_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        path: immortalwrt-mt798x-6.6/bin
 
     - name: Organize files
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
-        cd immortalwrt-mt798x/bin/targets/*/*
+        cd immortalwrt-mt798x-6.6/bin/targets/*/*
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "status=success" >> $GITHUB_OUTPUT
@@ -146,7 +146,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: immortalwrt-mt798x_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: immortalwrt-mt798x-6.6_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Generate release tag
@@ -173,11 +173,11 @@ jobs:
         retain_days: 7
         keep_minimum_runs: 12
 
-    - name: Remove old Releases
-      uses: dev-drprasad/delete-older-releases@master
-      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
-      with:
-        keep_latest: 8
-        delete_tags: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # - name: Remove old Releases
+    #   uses: dev-drprasad/delete-older-releases@master
+    #   if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+    #   with:
+    #     keep_latest: 8
+    #     delete_tags: true
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
