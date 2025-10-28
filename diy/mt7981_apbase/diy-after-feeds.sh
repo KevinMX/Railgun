@@ -17,3 +17,6 @@ sed -i 's/192.168.6.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
 # Modify default Hostname
 sed -i 's/ImmortalWrt/Railgun/g' package/base-files/files/bin/config_generate
+
+# Enable legacy 802.11b/g (experimental)
+git apply 01_enable_11bg.patch

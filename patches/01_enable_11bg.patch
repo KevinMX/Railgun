@@ -1,0 +1,29 @@
+diff --git a/package/network/utils/iwinfo/src/iwinfo_mtk.c b/package/network/utils/iwinfo/src/iwinfo_mtk.c
+index 1574e3888d..b699b68036 100644
+--- a/package/network/utils/iwinfo/src/iwinfo_mtk.c
++++ b/package/network/utils/iwinfo/src/iwinfo_mtk.c
+@@ -708,7 +708,7 @@ uciout:
+ 
+        if (band) {
+                if (!strcmp(band,"2g"))
+-                       *buf = (IWINFO_80211_N | IWINFO_80211_AX);
++                       *buf = (IWINFO_80211_B | IWINFO_80211_G | IWINFO_80211_N | IWINFO_80211_AX);
+                else if (!strcmp(band,"5g"))
+                        *buf = (IWINFO_80211_AC | IWINFO_80211_AX);
+                return 0;
+@@ -725,7 +725,7 @@ uciout:
+                {
+                        if (e->channel <= 14 ) //2.4Ghz
+                        {
+-                               *buf = (IWINFO_80211_N | IWINFO_80211_AX);
++                               *buf = (IWINFO_80211_B | IWINFO_80211_G | IWINFO_80211_N | IWINFO_80211_AX);
+                        }
+                        else //5Ghz
+                        {
+@@ -1101,4 +1101,4 @@ const struct iwinfo_ops mtk_ops = {
+        .scanlist         = mtk_get_scanlist,
+        .freqlist         = mtk_get_freqlist,
+        .close            = mtk_close,
+-};
+\ No newline at end of file
++};
