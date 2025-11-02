@@ -26,14 +26,8 @@ Currently supported but untested
 | ramips/mt7621 | [newifi 3 / newifi D2](https://openwrt.org/toh/lenovo/newifi_d2) |
 | ramips/mt7621 | [Phicomm K2P](https://openwrt.org/toh/phicomm/k2p_ke2p)          |
 | ipq40xx       | [P&W R619AC](https://openwrt.org/toh/p_w/r619ac)                 |
-| mt7981/apbase | All devices except JCG Q30 Pro                                   |
-
-WIP, currently broken
-
-| Target  | Device      |
-|---------|-------------|
-| mt7981  | All devices |
-| msm89xx | ufi003      |
+| x86_64        | generic (EFI boot only)                                          |
+| msm89xx       | ufi003                                                           |
 
 (I don't have the device on hand right ATM. Advice & bug reports welcome.)
 
@@ -41,17 +35,29 @@ WIP, currently broken
 
 ### Additional Info
 
-| Target                    | LuCI/LAN default IP | Username | Password   | Source Repo                                                                 |
-|---------------------------|---------------------|----------|------------|-----------------------------------------------------------------------------|
-| x86_64                    | `10.0.0.1`          | `root`   | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
-| ipq40xx                   | `10.0.0.1`          | `root`   | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
-| msm89xx                   | `10.0.0.1`          | `root`   | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)       |
-| mt7981                    | `10.0.0.1`          | `root`   | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
-| mt7981/apbase             | `10.0.0.1`          | `root`   | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
-| ramips/mt7621 (newifi_d2) | `192.168.2.1`       | `root`   | `password` | [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)       |
-| ramips/mt7621 (k2p)       | `192.168.2.1`       | `root`   | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
+| Target                          | LuCI/LAN default IP | Username | Password   | Source Repo                                                                 |
+| ------------------------------- | ------------------- | -------- | ---------- | --------------------------------------------------------------------------- |
+| mt7981/apbase                   | `10.0.0.1`          | `root`   | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
+| (EOL) mt7981                    | `10.0.0.1`          | `root`   | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
+| (EOL) x86_64                    | `10.0.0.1`          | `root`   | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
+| (EOL) ipq40xx                   | `10.0.0.1`          | `root`   | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
+| (EOL) msm89xx                   | `10.0.0.1`          | `root`   | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)       |
+| (EOL) ramips/mt7621 (newifi_d2) | `192.168.2.1`       | `root`   | `password` | [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)       |
+| (EOL) ramips/mt7621 (k2p)       | `192.168.2.1`       | `root`   | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
 
 Since I daily drive this firmware as well, it might contain some dirty & ugly hacks. If you feel uncomfortable about this, do not use this firmware.
+
+#### Recommended Bootloader
+
+| Target                          | Release URL or source repo                                                                                                   |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| mt7981/apbase                   | [Tianling's mod version](https://drive.wrt.moe/uboot/mediatek/) or [hanwckf/bl-mt798x](https://github.com/hanwckf/bl-mt798x) |
+| (EOL) mt7981                    | [Tianling's mod version](https://drive.wrt.moe/uboot/mediatek/) or [hanwckf/bl-mt798x](https://github.com/hanwckf/bl-mt798x) |
+| (EOL) x86_64                    | N/A                                                                                                                          |
+| (EOL) ipq40xx                   | [opboot](https://github.com/ericclose/r619ac-opboot-and-openwrt-flashing) or mainline U-Boot                                 |
+| (EOL) msm89xx                   | N/A                                                                                                                          |
+| (EOL) ramips/mt7621 (newifi_d2) | [Breed](https://breed.hackpascal.net/breed-mt7621-newifi-d2.bin)                                                             |
+| (EOL) ramips/mt7621 (k2p)       | [Breed](https://breed.hackpascal.net/breed-mt7621-phicomm-k2p.bin)                                                           |
 
 ***
 

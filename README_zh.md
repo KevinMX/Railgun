@@ -20,7 +20,14 @@
 | msm89xx       | ufi003                    |
 | mt7981/apbase | 捷稀 / JCG Q30 Pro        |
 
-目前已支持但未测试
+施工中
+
+| 目标平台      | 设备型号                      |
+| ------------- | ----------------------------- |
+| mt7981        | 所有设备                      |
+| mt7981/apbase | 除 JCG Q30 Pro 之外的所有设备 |
+
+已停止支持。请考虑使用 [ImmortalWrt](https://firmware-selector.immortalwrt.org/)（除 UFI003）   
 
 | 目标平台      | 设备型号                                                                    |
 |---------------|---------------------------------------------------------------------------|
@@ -43,18 +50,30 @@
 
 ### 其他信息
 
-| 目标平台                  | LuCI/LAN 默认 IP 地址 | 用户名 | 密码       | 源码仓库                                                                    |
-|---------------------------|-----------------------|--------|------------|-----------------------------------------------------------------------------|
-| x86_64                    | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
-| ipq40xx                   | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
-| msm89xx                   | `10.0.0.1`            | `root` | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)       |
-| mt7981                    | `10.0.0.1`            | `root` | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
-| mt7981/apbase             | `10.0.0.1`            | `root` | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
-| ramips/mt7621 (newifi_d2) | `192.168.2.1`         | `root` | `password` | [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)       |
-| ramips/mt7621 (k2p)       | `192.168.2.1`         | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
+| 目标平台                        | LuCI/LAN 默认 IP 地址 | 用户名 | 密码       | 源码仓库                                                                    |
+| ------------------------------- | --------------------- | ------ | ---------- | --------------------------------------------------------------------------- |
+| mt7981/apbase                   | `10.0.0.1`            | `root` | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
+| (EOL) mt7981                    | `10.0.0.1`            | `root` | `password` | [hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x) |
+| (EOL) x86_64                    | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
+| (EOL) ipq40xx                   | `10.0.0.1`            | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
+| (EOL) msm89xx                   | `10.0.0.1`            | `root` | `password` | [HandsomeMod/HandsomeMod](https://github.com/HandsomeMod/HandsomeMod)       |
+| (EOL) ramips/mt7621 (newifi_d2) | `192.168.2.1`         | `root` | `password` | [padavanonly/immortalwrt](https://github.com/padavanonly/immortalwrt)       |
+| (EOL) ramips/mt7621 (k2p)       | `192.168.2.1`         | `root` | `password` | [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)                   |
 
 
 由于这个固件实际上也是我日用的固件，为了满足我的需求，可能会包含一些不太能上台面的小 hack & 小魔改，介意慎用。
+
+#### 推荐使用的 Bootloader
+
+| 目标平台                        | 发布地址或源码仓库                                                                                               |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| mt7981/apbase                   | [天灵修改版](https://drive.wrt.moe/uboot/mediatek/) 或 [hanwckf/bl-mt798x](https://github.com/hanwckf/bl-mt798x) |
+| (EOL) mt7981                    | [天灵修改版](https://drive.wrt.moe/uboot/mediatek/) 或 [hanwckf/bl-mt798x](https://github.com/hanwckf/bl-mt798x) |
+| (EOL) x86_64                    | N/A                                                                                                              |
+| (EOL) ipq40xx                   | [opboot](https://github.com/ericclose/r619ac-opboot-and-openwrt-flashing) 或主线 U-Boot                          |
+| (EOL) msm89xx                   | N/A                                                                                                              |
+| (EOL) ramips/mt7621 (newifi_d2) | [Breed](https://breed.hackpascal.net/breed-mt7621-newifi-d2.bin)                                                 |
+| (EOL) ramips/mt7621 (k2p)       | [Breed](https://breed.hackpascal.net/breed-mt7621-phicomm-k2p.bin)                                               |
 
 ***
 
